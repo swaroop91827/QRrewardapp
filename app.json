@@ -1,0 +1,73 @@
+{
+  "expo": {
+    "name": "QR Reward App",
+    "slug": "qr-reward-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#07070F"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourname.qrrewardapp",
+      "infoPlist": {
+        "NSCameraUsageDescription": "QR codes scan karne ke liye camera chahiye",
+        "NSPhotoLibraryUsageDescription": "Profile photo ke liye",
+        "NSFaceIDUsageDescription": "Secure login ke liye"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#07070F"
+      },
+      "package": "com.yourname.qrrewardapp",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "VIBRATE",
+        "INTERNET",
+        "RECEIVE_BOOT_COMPLETED",
+        "POST_NOTIFICATIONS",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-barcode-scanner",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#FF5C35",
+          "sounds": []
+        }
+      ],
+      "expo-local-authentication",
+      "@react-native-google-signin/google-signin"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      },
+      "firebaseApiKey": "YOUR_FIREBASE_API_KEY",
+      "firebaseAuthDomain": "YOUR_PROJECT.firebaseapp.com",
+      "firebaseProjectId": "YOUR_PROJECT_ID",
+      "firebaseDatabaseUrl": "https://YOUR_PROJECT.firebaseio.com",
+      "firebaseStorageBucket": "YOUR_PROJECT.appspot.com",
+      "firebaseMessagingSenderId": "YOUR_SENDER_ID",
+      "firebaseAppId": "YOUR_APP_ID",
+      "googleWebClientId": "YOUR_GOOGLE_WEB_CLIENT_ID.apps.googleusercontent.com"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+// ============================================================
+//  firestore.rules
+//  Firebase Console > Firestore > Rules mein paste karo
+// ============================================================
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── USERS ──────────────────────────────────────────────
+    match /users/{userId} {
+      // Apna data read/write kar sakte hain
+      allow read: if request.auth != null;
+      allow create: if request.auth.uid == userId;
+      allow update: if request.auth.uid == userId
+        // Ye fields sirf server (admin) update kar sakta hai
+        && !('points'      in request.resource.data.diff(resource.data).affectedKeys())
+        && !('flagged'     in request.resource.data.diff(resource.data).affectedKeys())
+        && !('eligible'    in request.resource.data.diff(resource.data).affectedKeys())
+        && !('totalScans'  in request.resource.data.diff(resource.data).affectedKeys());
+    }
+
+    // ── VERIFIED QR ────────────────────────────────────────
+    match /verifiedQR/{code} {
+      allow read: if request.auth != null;
+      // Write sirf admin kar sakta hai (Cloud Function ya Admin SDK se)
+      allow write: if false;
+    }
+
+    // ── COUNTRY EVENTS ─────────────────────────────────────
+    match /countryEvents/{country} {
+      allow read: if request.auth != null;
+      allow write: if false; // Admin SDK se hi update hoga
+    }
+
+    // ── REWARD POOL ────────────────────────────────────────
+    match /rewardPool/{month} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // ── REWARD CLAIMS ──────────────────────────────────────
+    match /rewardClaims/{claimId} {
+      allow read: if request.auth != null
+        && resource.data.uid == request.auth.uid;
+      allow create: if request.auth != null
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.amount >= 100; // Min ₹100
+      allow update: if false; // Sirf admin update karega
+    }
+
+    // ── SCAN LOGS (optional) ───────────────────────────────
+    match /scanLogs/{logId} {
+      allow read: if false;
+      allow write: if false;
+    }
+  }
+}
