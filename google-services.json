@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "170563794734",
+    "project_id": "qr-reward-app",
+    "storage_bucket": "qr-reward-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170563794734:android:622750174c59d6ec106cbf",
+        "android_client_info": {
+          "package_name": "com.swaroopsingh.qrrewardapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170563794734-4vrvt6c8f1ii3gapp03sb7rvn6cekfog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaKKFnJBhWV2iO1ukBI3RxIyOO_T_rmiU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170563794734-4vrvt6c8f1ii3gapp03sb7rvn6cekfog.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
