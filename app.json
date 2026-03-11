@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.yourname.qrrewardapp",
+      "bundleIdentifier": "com.swaroopsingh.qrrewardapp",
       "infoPlist": {
         "NSCameraUsageDescription": "QR codes scan karne ke liye camera chahiye",
         "NSPhotoLibraryUsageDescription": "Profile photo ke liye",
@@ -29,7 +29,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#07070F"
       },
-      "package": "com.yourname.qrrewardapp",
+      "package": "com.swaroopsingh.qrrewardapp",
       "versionCode": 1,
       "permissions": [
         "CAMERA",
