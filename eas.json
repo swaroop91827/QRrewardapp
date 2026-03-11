@@ -15,15 +15,7 @@
     },
     "production": {
       "android": {
-        "buildType": "aab"
-      }
-    }
-  },
-  "submit": {
-    "production": {
-      "android": {
-        "serviceAccountKeyPath": "./google-play-key.json",
-        "track": "production"
+        "buildType": "apk"
       }
     }
   }
