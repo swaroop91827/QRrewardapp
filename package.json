@@ -10,6 +10,7 @@
     "build:ios": "eas build --platform ios"
   },
   "dependencies": {
+    "@expo/metro-config": "^0.17.1",
     "@expo/vector-icons": "^14.0.0",
     "@react-native-google-signin/google-signin": "^11.0.1",
     "@react-navigation/bottom-tabs": "^6.5.12",
