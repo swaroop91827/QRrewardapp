@@ -1,4 +1,4 @@
-rootProject.name = 'QRRewardApp'
+rootProject.name = 'QR Reward App'
 
 dependencyResolutionManagement {
   versionCatalogs {

@@ -1,4 +1,4 @@
-package com.yourname.qrrewardapp
+package com.swaroopsingh.qrrewardapp
 
 import android.os.Build
 import android.os.Bundle
