@@ -17,6 +17,7 @@ buildscript {
     dependencies {
         classpath('com.android.tools.build:gradle')
         classpath('com.facebook.react:react-native-gradle-plugin')
+        classpath('com.expo.modules:expo-modules-core:1.11.8')
     }
 }
 
@@ -38,3 +39,4 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+// Fix applied at end - ignore, see buildscript above
