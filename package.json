@@ -10,13 +10,12 @@
     "build:ios": "eas build --platform ios"
   },
   "dependencies": {
-    "@expo/metro-config": "^0.17.1",
     "@expo/vector-icons": "^14.0.0",
     "@react-native-google-signin/google-signin": "^11.0.1",
     "@react-navigation/bottom-tabs": "^6.5.12",
     "@react-navigation/native": "^6.1.10",
     "@react-navigation/stack": "^6.3.21",
-    "expo": "^50.0.0",
+    "expo": "^50.0.21",
     "expo-auth-session": "~5.4.0",
     "expo-barcode-scanner": "~12.9.0",
     "expo-camera": "^14.1.3",
