@@ -9,7 +9,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Ionicons } from '@expo/vector-icons';
 
 import { useAuth } from '../hooks/useAuth';
-import LoginScreen      from '../screens/LoginScreen';
+import LoginScreen from '../screens/LoginScreen';
+import SplashScreen from '../screens/SplashScreen';
 import HomeScreen       from '../screens/HomeScreen';
 import ScanScreen       from '../screens/ScanScreen';
 import LeaderboardScreen from '../screens/LeaderboardScreen';
